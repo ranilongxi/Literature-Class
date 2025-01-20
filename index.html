@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literature Class Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        nav {
+            text-align: center;
+            padding: 1rem;
+            background: #444;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+        .chat-box {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .chat-box input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .chat-box button {
+            padding: 10px;
+            border: none;
+            background: #333;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .chat-box button:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Literature Class Practice</h1>
+        <p>Engage with activities and AI tools to enhance your learning!</p>
+    </header>
+    
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#activities">Activities</a>
+        <a href="#chat">AI Chat</a>
+        <a href="#resources">Resources</a>
+    </nav>
+
+    <div class="container" id="home">
+        <h2>About This Website</h2>
+        <p>This platform helps you practice and engage with literature through interactive activities and AI-powered tools. Explore the sections to get started!</p>
+    </div>
+
+    <div class="container" id="activities">
+        <h2>Practice Activities</h2>
+        <p>Coming soon: interactive quizzes and challenges to test your literature knowledge!</p>
+    </div>
+
+    <div class="container" id="chat">
+        <h2>AI-Powered Chat</h2>
+        <p>Ask questions about literature, discuss themes, or get writing suggestions from AI!</p>
+        <div class="chat-box">
+            <input type="text" id="userInput" placeholder="Type your message here...">
+            <button onclick="sendMessage()">Send</button>
+            <div id="chatOutput"></div>
+        </div>
+    </div>
+
+    <div class="container" id="resources">
+        <h2>Resources</h2>
+        <p>Downloadable materials to help you with your studies:</p>
+        <ul>
+            <li><a href="#">Resource 1</a></li>
+            <li><a href="#">Resource 2</a></li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Literature Class Practice. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function sendMessage() {
+            const input = document.getElementById('userInput').value;
+            const output = document.getElementById('chatOutput');
+
+            // Placeholder response for the AI chat feature
+            const response = `You said: "${input}". AI response will go here.`;
+
+            const message = document.createElement('p');
+            message.textContent = response;
+            output.appendChild(message);
+
+            document.getElementById('userInput').value = '';
+        }
+    </script>
+</body>
+</html>
